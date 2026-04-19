@@ -351,7 +351,7 @@ ArticulationBody:
   m_ImplicitCom: 0
   m_ImplicitTensor: 0
   m_Immovable: 0
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_CollisionDetectionMode: 0
 --- !u!114 &54330826
 MonoBehaviour:
@@ -1358,7 +1358,7 @@ ArticulationBody:
   m_ImplicitCom: 0
   m_ImplicitTensor: 0
   m_Immovable: 0
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_CollisionDetectionMode: 0
 --- !u!114 &292826654
 MonoBehaviour:
@@ -2262,7 +2262,7 @@ ArticulationBody:
   m_ImplicitCom: 0
   m_ImplicitTensor: 0
   m_Immovable: 0
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_CollisionDetectionMode: 0
 --- !u!114 &526405847
 MonoBehaviour:
@@ -2723,7 +2723,7 @@ ArticulationBody:
   m_ImplicitCom: 0
   m_ImplicitTensor: 0
   m_Immovable: 0
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_CollisionDetectionMode: 0
 --- !u!114 &585527663
 MonoBehaviour:
@@ -2873,7 +2873,7 @@ ArticulationBody:
   m_ImplicitCom: 0
   m_ImplicitTensor: 0
   m_Immovable: 0
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_CollisionDetectionMode: 0
 --- !u!114 &594651927
 MonoBehaviour:
@@ -3024,7 +3024,7 @@ ArticulationBody:
   m_ImplicitCom: 0
   m_ImplicitTensor: 0
   m_Immovable: 0
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_CollisionDetectionMode: 0
 --- !u!114 &600138063
 MonoBehaviour:
@@ -3527,7 +3527,7 @@ ArticulationBody:
   m_ImplicitCom: 0
   m_ImplicitTensor: 0
   m_Immovable: 0
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_CollisionDetectionMode: 0
 --- !u!114 &698020996
 MonoBehaviour:
@@ -3820,7 +3820,7 @@ ArticulationBody:
   m_ImplicitCom: 0
   m_ImplicitTensor: 0
   m_Immovable: 0
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_CollisionDetectionMode: 0
 --- !u!114 &718306967
 MonoBehaviour:
@@ -3961,7 +3961,7 @@ ArticulationBody:
   m_ImplicitCom: 0
   m_ImplicitTensor: 0
   m_Immovable: 0
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_CollisionDetectionMode: 0
 --- !u!114 &726739704
 MonoBehaviour:
@@ -5150,7 +5150,7 @@ ArticulationBody:
   m_ImplicitCom: 0
   m_ImplicitTensor: 0
   m_Immovable: 0
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_CollisionDetectionMode: 0
 --- !u!114 &1096283293
 MonoBehaviour:
@@ -6179,7 +6179,7 @@ ArticulationBody:
   m_ImplicitCom: 0
   m_ImplicitTensor: 0
   m_Immovable: 0
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_CollisionDetectionMode: 0
 --- !u!114 &1503264222
 MonoBehaviour:
@@ -7258,7 +7258,7 @@ ArticulationBody:
   m_ImplicitCom: 0
   m_ImplicitTensor: 0
   m_Immovable: 0
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_CollisionDetectionMode: 0
 --- !u!114 &1835308059
 MonoBehaviour:
