@@ -2,11 +2,16 @@
 
 [RequireComponent(typeof(Rigidbody), typeof(SphereCollider))]
 public class BallMove : MonoBehaviour {
-    public Vector3 velocity = new Vector3(0.001f, 0.001f, 0.001f); 
-    public float maxSpeed = 5f; 
-    public float acceleration = 0.04f; 
+    public Vector3 velocity = new Vector3(0.001f, 0.001f, 0.001f);
+
+    public float acceleration = 0.04f;
+
+    public float maxSpeed;   //  改成會變動的
+
     Rigidbody rb;
     float radius;
+
+    float elapsedTime = 0f;  // 用來記時間
 
     void Start() {
         rb = GetComponent<Rigidbody>();
@@ -14,15 +19,23 @@ public class BallMove : MonoBehaviour {
         rb.isKinematic = true;
 
         radius = GetComponent<SphereCollider>().radius * transform.localScale.x;
+
+        maxSpeed = GetMaxSpeedByTime(0f);
     }
 
     void FixedUpdate() {
         float dt = Time.fixedDeltaTime;
 
-      
+        // 累積時間
+        elapsedTime += dt;
+
+        // 更新 maxSpeed
+        maxSpeed = GetMaxSpeedByTime(elapsedTime);
+
         float speed = velocity.magnitude;
         speed += acceleration * dt;
-        speed = Mathf.Min(speed, maxSpeed); 
+        speed = Mathf.Min(speed, maxSpeed);
+
         velocity = velocity.normalized * speed;
 
         Vector3 dir = velocity.normalized;
@@ -31,28 +44,22 @@ public class BallMove : MonoBehaviour {
         RaycastHit hit;
 
         if (Physics.SphereCast(rb.position, radius, dir, out hit, dist)) {
-
             float safeDist = Mathf.Max(hit.distance - 0.002f, 0f);
             rb.MovePosition(rb.position + dir * safeDist);
 
-            //處理碰撞
-            if (hit.collider.CompareTag("TopBoard")) {
+            if (hit.collider.CompareTag("TopBoard"))
                 ScoreManager.Instance.AddScore_1(1);
-            } else if (hit.collider.CompareTag("DownBoard")) {
+            else if (hit.collider.CompareTag("DownBoard"))
                 ScoreManager.Instance.AddScore_2(1);
-            } 
             //else if (!hit.collider.CompareTag("Wall")) {
-               // Time.timeScale = 0f;
-          //  }
-
-            //  反射
+            // Time.timeScale = 0f;
+            //  }
             velocity = Vector3.Reflect(velocity, hit.normal);
-
         } else {
             rb.MovePosition(rb.position + velocity * dt);
-        
         }
     }
+
     float GetMaxSpeedByTime(float t) {
         if (t < 10f) return 0.01f;
         else if (t < 20f) return 0.1f;
