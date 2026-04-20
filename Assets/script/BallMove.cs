@@ -40,4 +40,17 @@ public class BallMove : MonoBehaviour {
             rb.MovePosition(rb.position + velocity * dt);
         }
     }
+    void OnCollisionEnter(Collision collision) {
+        if (collision.gameObject.CompareTag("TopBoard")) {
+            ScoreManager.Instance.AddScore_1(1);
+        }
+        else if (collision.gameObject.CompareTag("DownBoard")) {
+            ScoreManager.Instance.AddScore_2(1);
+        }
+        else if(collision.gameObject.CompareTag("Wall")) {
+            return;
+        }
+        else { Time.timeScale = 0f; }
+    }
+
 }
