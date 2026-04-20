@@ -231,7 +231,7 @@ GameObject:
   - component: {fileID: 54330823}
   m_Layer: 0
   m_Name: down2_1
-  m_TagString: Untagged
+  m_TagString: DownBoard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -297,7 +297,7 @@ ArticulationBody:
   m_Enabled: 1
   serializedVersion: 6
   m_Mass: 0.3768
-  m_ParentAnchorPosition: {x: 0.08, y: 0.014999981, z: 0}
+  m_ParentAnchorPosition: {x: 0.08, y: 0.015000011, z: 0}
   m_ParentAnchorRotation: {x: 0, y: -0.70710677, z: 0, w: 0.70710677}
   m_AnchorPosition: {x: 0, y: 0, z: 0}
   m_AnchorRotation: {x: 0, y: -0.70710677, z: 0, w: 0.70710677}
@@ -788,7 +788,7 @@ GameObject:
   - component: {fileID: 149499881}
   m_Layer: 0
   m_Name: Cube (1)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -973,7 +973,7 @@ GameObject:
   - component: {fileID: 173685117}
   m_Layer: 0
   m_Name: Cube (3)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1342,7 +1342,7 @@ GameObject:
   - component: {fileID: 292826651}
   m_Layer: 0
   m_Name: down_1
-  m_TagString: Untagged
+  m_TagString: TopBoard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2961,7 +2961,7 @@ GameObject:
   - component: {fileID: 594651924}
   m_Layer: 0
   m_Name: down1_1
-  m_TagString: Untagged
+  m_TagString: TopBoard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3307,7 +3307,7 @@ GameObject:
   - component: {fileID: 640254664}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4952,7 +4952,7 @@ GameObject:
   - component: {fileID: 1037588449}
   m_Layer: 0
   m_Name: Cube (2)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5294,7 +5294,7 @@ GameObject:
   - component: {fileID: 1096283290}
   m_Layer: 0
   m_Name: down_1
-  m_TagString: Untagged
+  m_TagString: DownBoard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5360,7 +5360,7 @@ ArticulationBody:
   m_Enabled: 1
   serializedVersion: 6
   m_Mass: 0.3768
-  m_ParentAnchorPosition: {x: 0.02, y: 0.01999998, z: 0}
+  m_ParentAnchorPosition: {x: 0.02, y: 0.02000001, z: 0}
   m_ParentAnchorRotation: {x: 0, y: -0.70710677, z: 0, w: 0.70710677}
   m_AnchorPosition: {x: 0, y: 0, z: 0}
   m_AnchorRotation: {x: 0, y: -0.70710677, z: 0, w: 0.70710677}
@@ -6257,7 +6257,7 @@ Transform:
   m_GameObject: {fileID: 1315613948}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: 0.54807, z: -0.00985}
+  m_LocalPosition: {x: -0, y: 0.162, z: -0.002}
   m_LocalScale: {x: 0.02, y: 0.02, z: 0.02}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6583,7 +6583,7 @@ GameObject:
   - component: {fileID: 1503264219}
   m_Layer: 0
   m_Name: down1_1
-  m_TagString: Untagged
+  m_TagString: DownBoard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6649,7 +6649,7 @@ ArticulationBody:
   m_Enabled: 1
   serializedVersion: 6
   m_Mass: 0.3768
-  m_ParentAnchorPosition: {x: -0.039999995, y: 0.014999981, z: 0}
+  m_ParentAnchorPosition: {x: -0.039999995, y: 0.015000011, z: 0}
   m_ParentAnchorRotation: {x: 0, y: -0.70710677, z: 0, w: 0.70710677}
   m_AnchorPosition: {x: 0, y: 0, z: 0}
   m_AnchorRotation: {x: 0, y: -0.70710677, z: 0, w: 0.70710677}
@@ -6985,7 +6985,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 91.6286, y: -34.9}
+  m_AnchoredPosition: {x: 91.6286, y: -164.3}
   m_SizeDelta: {x: 91.2573, y: 84.3976}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1581263942
@@ -7587,7 +7587,7 @@ Transform:
   m_GameObject: {fileID: 1744707565}
   serializedVersion: 2
   m_LocalRotation: {x: 1, y: 0, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalPosition: {x: 0, y: 0.378, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8043,7 +8043,7 @@ GameObject:
   - component: {fileID: 1835308056}
   m_Layer: 0
   m_Name: down2_1
-  m_TagString: Untagged
+  m_TagString: TopBoard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

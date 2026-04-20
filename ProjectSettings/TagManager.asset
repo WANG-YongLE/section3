@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 3
   tags:
   - robot
+  - TopBoard
+  - DownBoard
+  - Wall
   layers:
   - Default
   - TransparentFX
