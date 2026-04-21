@@ -3,16 +3,14 @@
 [RequireComponent(typeof(Rigidbody), typeof(SphereCollider))]
 public class BallMove : MonoBehaviour {
     public Vector3 velocity = new Vector3(0.001f, 0.001f, 0.001f);
-
     public float acceleration = 0.04f;
-
     public float maxSpeed;   //  改成會變動的
 
     Rigidbody rb;
     float radius;
 
     float elapsedTime = 0f;  // 用來記時間
-
+    public Vector3 Velocity => velocity;
     void Start() {
         rb = GetComponent<Rigidbody>();
         rb.useGravity = false;
