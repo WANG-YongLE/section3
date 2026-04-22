@@ -7,7 +7,7 @@ public class MultiSliderController : MonoBehaviour {
     ROSConnection ros;
 
     public SliderConfig[] sliders;
-    public float speed = 0.0001f;
+    public float speed = 0.1f;
 
     void Start() {
         ros = ROSConnection.GetOrCreateInstance();
