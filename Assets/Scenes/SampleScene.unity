@@ -6304,7 +6304,7 @@ Transform:
   m_GameObject: {fileID: 1315613948}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.1654, y: 0.032, z: 0.131}
+  m_LocalPosition: {x: 0.092, y: 0.108, z: 0.055}
   m_LocalScale: {x: 0.02, y: 0.02, z: 0.02}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6384,7 +6384,7 @@ MonoBehaviour:
   sliders:
   - topicName: 
     joint: {fileID: 1835308058}
-    targetPosition: 0.1
+    targetPosition: 0
     currentPosition: 0
   - topicName: 
     joint: {fileID: 292826653}
@@ -6406,7 +6406,7 @@ MonoBehaviour:
     joint: {fileID: 1503264221}
     targetPosition: 0
     currentPosition: 0
-  speed: 0.5
+  speed: 0.01
 --- !u!4 &1340859315
 Transform:
   m_ObjectHideFlags: 0
@@ -6686,6 +6686,64 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d28b622466695404f8d5eab9da80491c, type: 3}
+--- !u!1 &1491675122
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1491675124}
+  - component: {fileID: 1491675123}
+  m_Layer: 0
+  m_Name: JointStatePublisher
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1491675123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1491675122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d96dfeee0606a644ea55a376682da82e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SlidePublisher
+  joints:
+  - topicName: down_plus
+    joint: {fileID: 1835308058}
+  - topicName: down_min
+    joint: {fileID: 292826653}
+  - topicName: down_minus
+    joint: {fileID: 594651926}
+  - topicName: up_plus
+    joint: {fileID: 54330825}
+  - topicName: up_min
+    joint: {fileID: 1096283292}
+  - topicName: pu_minus
+    joint: {fileID: 1503264221}
+  publishRate: 0.1
+--- !u!4 &1491675124
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1491675122}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.22564, y: 0.22562, z: -0.01626}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1503264217
 GameObject:
   m_ObjectHideFlags: 0
@@ -9133,3 +9191,4 @@ SceneRoots:
   - {fileID: 233741251}
   - {fileID: 1340859315}
   - {fileID: 446610449}
+  - {fileID: 1491675124}
