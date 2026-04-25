@@ -6325,6 +6325,10 @@ MonoBehaviour:
   velocity: {x: 2, y: 2, z: 2}
   acceleration: 0.04
   maxSpeed: 5
+  topicVX: /ball_vx
+  topicVY: /ball_vy
+  topicVZ: /ball_vz
+  publishInterval: 0.1
 --- !u!54 &1315613954
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6382,27 +6386,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SliderMove
   sliders:
-  - topicName: 
+  - topicName: slider_1
     joint: {fileID: 1835308058}
     targetPosition: 0
     currentPosition: 0
-  - topicName: 
+  - topicName: slider_2
     joint: {fileID: 292826653}
     targetPosition: 0
     currentPosition: 0
-  - topicName: 
+  - topicName: slider_3
     joint: {fileID: 594651926}
     targetPosition: 0
     currentPosition: 0
-  - topicName: 
+  - topicName: slider_4
     joint: {fileID: 54330825}
     targetPosition: 0
     currentPosition: 0
-  - topicName: 
+  - topicName: slider_5
     joint: {fileID: 1096283292}
     targetPosition: 0
     currentPosition: 0
-  - topicName: 
+  - topicName: slider_6
     joint: {fileID: 1503264221}
     targetPosition: 0
     currentPosition: 0
