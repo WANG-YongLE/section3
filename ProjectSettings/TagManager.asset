@@ -8,11 +8,12 @@ TagManager:
   - TopBoard
   - DownBoard
   - Wall
+  - Ball
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - BALL
   - Water
   - UI
   - 

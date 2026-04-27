@@ -7,10 +7,10 @@ public class UnityPublisher : MonoBehaviour {
     public string topicName = "unity_topic";
 
     void Start() {
-        ros = ROSConnection.GetOrCreateInstance();
-        ros.RegisterPublisher<StringMsg>(topicName);
+        //ros = ROSConnection.GetOrCreateInstance();
+        //ros.RegisterPublisher<StringMsg>(topicName);
 
-        InvokeRepeating("PublishMessage", 1.0f, 2.0f);
+        //InvokeRepeating("PublishMessage", 1.0f, 2.0f);
     }
 
     void PublishMessage() {

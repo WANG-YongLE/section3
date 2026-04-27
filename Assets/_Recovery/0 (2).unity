@@ -719,7 +719,7 @@ ArticulationBody:
   m_Enabled: 1
   serializedVersion: 6
   m_Mass: 0.3768
-  m_ParentAnchorPosition: {x: 0.12923, y: 0.019999996, z: 0}
+  m_ParentAnchorPosition: {x: 0.12923, y: 0.02, z: 0}
   m_ParentAnchorRotation: {x: 0, y: -0.70710677, z: 0, w: 0.70710677}
   m_AnchorPosition: {x: 0, y: 0, z: 0}
   m_AnchorRotation: {x: 0, y: -0.70710677, z: 0, w: 0.70710677}
@@ -1711,14 +1711,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AutoDataCollector
   ballPrefab: {fileID: 1315613948}
-  xRange: {x: -0.1494, y: 0.1494}
-  zRange: {x: -0.1182, y: 0.1182}
-  step: 0.04
-  startY: 0.053
-  yStep: 0.04
-  maxY: 0.332
-  speedMagnitude: 0.1
-  dataFileName: grid_collision_data
+  ballCount: 10
+  yStep: 0.08
+  xzStep: 0.04
+  minBounds: {x: -0.1494, y: 0.052, z: -0.1182}
+  maxBounds: {x: 0.1494, y: 0.332, z: 0.1182}
+  speedMagnitude: 0.5
+  baseFileName: ball_landing_data
   autoSaveInterval: 30
 --- !u!4 &696664136
 Transform:
@@ -2961,7 +2960,7 @@ Transform:
   m_GameObject: {fileID: 1133129590}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.218, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3266,7 +3265,7 @@ GameObject:
   - component: {fileID: 1315613949}
   - component: {fileID: 1315613953}
   - component: {fileID: 1315613954}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Sphere
   m_TagString: Ball
   m_Icon: {fileID: 0}
@@ -3382,9 +3381,6 @@ MonoBehaviour:
   acceleration: 0.04
   maxSpeed: 5
   autoCollectMode: 0
-  collisionMask:
-    serializedVersion: 2
-    m_Bits: 1
 --- !u!54 &1315613954
 Rigidbody:
   m_ObjectHideFlags: 0

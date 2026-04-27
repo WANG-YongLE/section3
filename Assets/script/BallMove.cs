@@ -1,71 +1,93 @@
 ﻿using UnityEngine;
+using System;
 
 [RequireComponent(typeof(Rigidbody), typeof(SphereCollider))]
 public class BallMove : MonoBehaviour {
+    [Header("运动参数")]
     public Vector3 velocity = new Vector3(0.001f, 0.001f, 0.001f);
+    public float acceleration = 0f;
+    public float maxSpeed = 100f;
 
-    public float acceleration = 0.04f;
+    [Header("自动收集模式")]
+    public bool autoCollectMode = true;
 
-    public float maxSpeed;   //  改成會變動的
+    private Rigidbody rb;
+    private float radius;
+    private float elapsedTime = 0f;
+    public LayerMask collisionMask;
 
-    Rigidbody rb;
-    float radius;
+    public event Action<Vector3, Vector3, Vector3> OnHitBoard;
 
-    float elapsedTime = 0f;  // 用來記時間
-
-    void Start() {
+    void Awake() {
+     //   collisionMask = LayerMask.GetMask("Default", "TopBoard", "DownBoard");
         rb = GetComponent<Rigidbody>();
-        rb.useGravity = false;
-        rb.isKinematic = true;
-
+        if (rb == null)
+            Debug.LogError("BallMove: 找不到 Rigidbody！");
         radius = GetComponent<SphereCollider>().radius * transform.localScale.x;
-
-        maxSpeed = GetMaxSpeedByTime(0f);
     }
 
-    void FixedUpdate() {
-        float dt = Time.fixedDeltaTime;
-
-        // 累積時間
-        elapsedTime += dt;
-
-        // 更新 maxSpeed
-        maxSpeed = GetMaxSpeedByTime(elapsedTime);
-
-        float speed = velocity.magnitude;
-        speed += acceleration * dt;
-        speed = Mathf.Min(speed, maxSpeed);
-
-        velocity = velocity.normalized * speed;
-
-        Vector3 dir = velocity.normalized;
-        float dist = velocity.magnitude * dt;
-
-        RaycastHit hit;
-
-        if (Physics.SphereCast(rb.position, radius, dir, out hit, dist)) {
-            float safeDist = Mathf.Max(hit.distance - 0.002f, 0f);
-            rb.MovePosition(rb.position + dir * safeDist);
-
-            if (hit.collider.CompareTag("TopBoard"))
-                ScoreManager.Instance.AddScore_1(1);
-            else if (hit.collider.CompareTag("DownBoard"))
-                ScoreManager.Instance.AddScore_2(1);
-            //else if (!hit.collider.CompareTag("Wall")) {
-            // Time.timeScale = 0f;
-            //  }
-            velocity = Vector3.Reflect(velocity, hit.normal);
-        } else {
-            rb.MovePosition(rb.position + velocity * dt);
+    void Start() {
+        if (rb != null) {
+            rb.useGravity = false;
+            rb.isKinematic = true;
         }
     }
 
-    float GetMaxSpeedByTime(float t) {
-        if (t < 10f) return 0.01f;
-        else if (t < 20f) return 0.1f;
-        else if (t < 30f) return 0.4f;
-        else if (t < 40f) return 1f;
-        else if (t < 50f) return 2f;
-        else return 5f;
+    void FixedUpdate() {
+        if (rb == null) return;
+
+        float dt = Time.fixedDeltaTime;
+        elapsedTime += dt;
+
+        // 自动收集模式下：不做任何加速和归一化，直接使用当前速度向量
+        if (!autoCollectMode) {
+            float speed = velocity.magnitude;
+            speed += acceleration * dt;
+            speed = Mathf.Min(speed, maxSpeed);
+            if (speed > 0.0001f)
+                velocity = velocity.normalized * speed;
+            else
+                velocity = Vector3.zero;
+        }
+
+        // 处理移动和碰撞
+        Vector3 moveDelta = velocity * dt;
+        float dist = moveDelta.magnitude;
+        if (dist < 0.0001f) return;
+
+        Vector3 dir = moveDelta.normalized;
+        RaycastHit hit;
+        
+        if (Physics.SphereCast(rb.position, radius, dir, out hit, dist, collisionMask)) {
+            float safeDist = Mathf.Max(hit.distance - 0.002f, 0f);
+            rb.MovePosition(rb.position + dir * safeDist);
+
+            bool isTop = hit.collider.CompareTag("TopBoard");
+            bool isDown = hit.collider.CompareTag("DownBoard");
+            Debug.Log("Hit: " + hit.collider.name + " Tag: " + hit.collider.tag);
+            if (isTop || isDown) {
+                // 记录碰撞数据（位置、速度都是碰撞前的）
+                OnHitBoard?.Invoke(hit.point, transform.position, velocity);
+
+                
+                    if (isTop && ScoreManager.Instance != null)
+                        ScoreManager.Instance.AddScore_1(1);
+                    else if (isDown && ScoreManager.Instance != null)
+                        ScoreManager.Instance.AddScore_2(1);
+                
+            }
+
+            // 反弹（只改变方向，大小不变）
+            velocity = Vector3.Reflect(velocity, hit.normal);
+        } else {
+            rb.MovePosition(rb.position + moveDelta);
+        }
+    }
+
+    public void ResetBall(Vector3 newPosition, Vector3 newVelocity) {
+        if (rb == null) return;
+        rb.position = newPosition;
+        velocity = newVelocity;
+        elapsedTime = 0f;
     }
 }
