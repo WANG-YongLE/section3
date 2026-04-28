@@ -58,9 +58,9 @@ public class BallMove : MonoBehaviour {
                 ScoreManager.Instance.AddScore_1(1);
             else if (hit.collider.CompareTag("DownBoard"))
                 ScoreManager.Instance.AddScore_2(1);
-            //else if (!hit.collider.CompareTag("Wall")) {
-            // Time.timeScale = 0f;
-            //  }
+            else if (!hit.collider.CompareTag("Wall")) {
+                Time.timeScale = 0f;
+            }
             velocity = Vector3.Reflect(velocity, hit.normal);
         } else {
             rb.MovePosition(rb.position + velocity * dt);
