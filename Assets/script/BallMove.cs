@@ -53,7 +53,7 @@ public class BallMove : MonoBehaviour {
         if (Physics.SphereCast(rb.position, radius, dir, out hit, dist)) {
             float safeDist = Mathf.Max(hit.distance - 0.002f, 0f);
             rb.MovePosition(rb.position + dir * safeDist);
-
+            Debug.Log($"Hit object: {hit.collider.name}, Tag: '{hit.collider.tag}'");
             if (hit.collider.CompareTag("TopBoard"))
                 ScoreManager.Instance.AddScore_1(1);
             else if (hit.collider.CompareTag("DownBoard"))
