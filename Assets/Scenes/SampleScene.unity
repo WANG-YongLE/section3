@@ -6730,7 +6730,7 @@ MonoBehaviour:
     joint: {fileID: 1503264221}
     targetPosition: 0
     currentPosition: 0
-  speed: 0.1
+  speed: 0.5
 --- !u!4 &1340859315
 Transform:
   m_ObjectHideFlags: 0
