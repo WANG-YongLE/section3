@@ -10,11 +10,11 @@ public class SimpleGridBalls : MonoBehaviour {
     [Header("XZ 平面范围与步长")]
     public Vector2 xRange = new Vector2(-0.1494f, 0.1494f);
     public Vector2 zRange = new Vector2(-0.1182f, 0.1182f);
-    public float step = 0.04f;
+    public float step = 0.001f;
 
     [Header("起始Y高度及步进")]
     public float startY = 0.053f;
-    public float yStep = 0.04f;
+    public float yStep = 0.001f;
     public float maxY = 0.332f;
 
     [Header("速度方向（8个对角线方向）")]

@@ -1713,9 +1713,9 @@ MonoBehaviour:
   ballPrefab: {fileID: 1315613948}
   xRange: {x: -0.1494, y: 0.1494}
   zRange: {x: -0.1182, y: 0.1182}
-  step: 0.04
+  step: 0.01
   startY: 0.053
-  yStep: 0.04
+  yStep: 0.01
   maxY: 0.332
   speedMagnitude: 0.1
   dataFileName: grid_collision_data
