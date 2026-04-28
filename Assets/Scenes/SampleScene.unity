@@ -6426,27 +6426,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SliderMove
   sliders:
-  - topicName: slider_1
+  - topicName: goal_s1
     joint: {fileID: 1835308058}
     targetPosition: 0
     currentPosition: 0
-  - topicName: slider_2
+  - topicName: goal_s2
     joint: {fileID: 292826653}
     targetPosition: 0
     currentPosition: 0
-  - topicName: slider_3
+  - topicName: goal_s3
     joint: {fileID: 594651926}
     targetPosition: 0
     currentPosition: 0
-  - topicName: slider_4
+  - topicName: goal_s4
     joint: {fileID: 54330825}
     targetPosition: 0
     currentPosition: 0
-  - topicName: slider_5
+  - topicName: goal_s5
     joint: {fileID: 1096283292}
     targetPosition: 0
     currentPosition: 0
-  - topicName: slider_6
+  - topicName: goal_s6
     joint: {fileID: 1503264221}
     targetPosition: 0
     currentPosition: 0
