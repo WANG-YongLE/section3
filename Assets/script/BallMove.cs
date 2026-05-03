@@ -5,7 +5,7 @@ using RosMessageTypes.Std;
 public class BallMove : MonoBehaviour {
     public Vector3 velocity = new Vector3(0.001f, 0.001f, 0.001f);
     public float acceleration = 0.04f;
-    public float maxSpeed;   //  改成會變動的
+    public float maxSpeed; 
     [SerializeField] private string topicVX = "/ball_vx";
     [SerializeField] private string topicVY = "/ball_vy";
     [SerializeField] private string topicVZ = "/ball_vz";
@@ -14,15 +14,22 @@ public class BallMove : MonoBehaviour {
     float radius;
     private ROSConnection ros;
     private float publishTimer = 0f;
-    float elapsedTime = 0f;  // 用來記時間
+    float elapsedTime = 0f;  
     public Vector3 Velocity => velocity;
     void Start() {
         rb = GetComponent<Rigidbody>();
         rb.useGravity = false;
         rb.isKinematic = true;
-
+        float randX = Random.Range(-0.1f, 0.1f);
+        float randY = Random.Range(0.12f, 0.19f);
+        float randZ = Random.Range(-0.1f, 0.1f);
+        transform.position = new Vector3(randX, randY, randZ);
         radius = GetComponent<SphereCollider>().radius * transform.localScale.x;
-
+        int sx = Random.Range(0, 2) == 0 ? -1 : 1;
+        int sy = Random.Range(0, 2) == 0 ? -1 : 1;
+        int sz = Random.Range(0, 2) == 0 ? -1 : 1;
+     
+        velocity = new Vector3(sx * 0.001f, sy * 0.001f, sz * 0.001f);
         maxSpeed = GetMaxSpeedByTime(0f);
         ros = ROSConnection.GetOrCreateInstance();
         ros.RegisterPublisher<Float32Msg>(topicVX);
@@ -56,10 +63,13 @@ public class BallMove : MonoBehaviour {
             Debug.Log($"Hit object: {hit.collider.name}, Tag: '{hit.collider.tag}'");
             if (hit.collider.CompareTag("TopBoard"))
                 ScoreManager.Instance.AddScore_1(1);
-            else if (hit.collider.CompareTag("DownBoard"))
+            else if (hit.collider.CompareTag("DownBoard")) {
+
                 ScoreManager.Instance.AddScore_2(1);
-            else if (!hit.collider.CompareTag("Wall")) {
+            } else if (!hit.collider.CompareTag("Wall")) {
                 Time.timeScale = 0f;
+                Debug.Log("Game Over!");
+                Debug.Log("Final Score : " + ScoreManager.Instance.score_1 + " - " + ScoreManager.Instance.score_2);
             }
             velocity = Vector3.Reflect(velocity, hit.normal);
         } else {

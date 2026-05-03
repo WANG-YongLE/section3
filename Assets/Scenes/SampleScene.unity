@@ -1691,6 +1691,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: down2_1
       objectReference: {fileID: 0}
+    - target: {fileID: 6224113429472054853, guid: 87b51ce6712499845ab442e109953c67, type: 3}
+      propertyPath: m_TagString
+      value: DownBoard
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7805559452497553507, guid: 87b51ce6712499845ab442e109953c67, type: 3}
     - {fileID: 3752040399590063957, guid: 87b51ce6712499845ab442e109953c67, type: 3}
@@ -2869,6 +2873,10 @@ PrefabInstance:
     - target: {fileID: 5974577145141231709, guid: b067138fd4eda1946b9c9a967ae8d027, type: 3}
       propertyPath: m_Name
       value: down1_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5974577145141231709, guid: b067138fd4eda1946b9c9a967ae8d027, type: 3}
+      propertyPath: m_TagString
+      value: DownBoard
       objectReference: {fileID: 0}
     - target: {fileID: 6311047042305976909, guid: b067138fd4eda1946b9c9a967ae8d027, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4958,7 +4966,7 @@ GameObject:
   - component: {fileID: 957953466}
   m_Layer: 0
   m_Name: unnamed
-  m_TagString: Untagged
+  m_TagString: DownBoard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5403,7 +5411,7 @@ GameObject:
   - component: {fileID: 1074088026}
   m_Layer: 0
   m_Name: unnamed
-  m_TagString: Untagged
+  m_TagString: DownBoard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6758,7 +6766,7 @@ GameObject:
   - component: {fileID: 1365088455}
   m_Layer: 0
   m_Name: unnamed
-  m_TagString: Untagged
+  m_TagString: DownBoard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7311,6 +7319,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: down_1
       objectReference: {fileID: 0}
+    - target: {fileID: 4629207671467688657, guid: 937a81b992e9be84bbeebf940d9a5706, type: 3}
+      propertyPath: m_TagString
+      value: DownBoard
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9074879518682067609, guid: 937a81b992e9be84bbeebf940d9a5706, type: 3}
     - {fileID: 8637654520584022071, guid: 937a81b992e9be84bbeebf940d9a5706, type: 3}
@@ -7393,6 +7405,10 @@ PrefabInstance:
     - target: {fileID: 3908448091054571949, guid: bc49b5e7a51ff944d934e174106d1a42, type: 3}
       propertyPath: m_Name
       value: down1_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3908448091054571949, guid: bc49b5e7a51ff944d934e174106d1a42, type: 3}
+      propertyPath: m_TagString
+      value: TopBoard
       objectReference: {fileID: 0}
     - target: {fileID: 6471732511964000708, guid: bc49b5e7a51ff944d934e174106d1a42, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7609,6 +7625,10 @@ PrefabInstance:
     - target: {fileID: 460017511681990685, guid: 6184f1b66dfe10a4f98cb53b88210c0c, type: 3}
       propertyPath: m_Name
       value: down_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 460017511681990685, guid: 6184f1b66dfe10a4f98cb53b88210c0c, type: 3}
+      propertyPath: m_TagString
+      value: TopBoard
       objectReference: {fileID: 0}
     - target: {fileID: 6944162587992940184, guid: 6184f1b66dfe10a4f98cb53b88210c0c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7832,6 +7852,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: down2_1
       objectReference: {fileID: 0}
+    - target: {fileID: 2979827590853302139, guid: 958904806fe896844b37360c8615ebce, type: 3}
+      propertyPath: m_TagString
+      value: TopBoard
+      objectReference: {fileID: 0}
     - target: {fileID: 3012830906581360117, guid: 958904806fe896844b37360c8615ebce, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -7910,7 +7934,7 @@ GameObject:
   - component: {fileID: 1695194153}
   m_Layer: 0
   m_Name: unnamed
-  m_TagString: Untagged
+  m_TagString: TopBoard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8005,7 +8029,7 @@ GameObject:
   - component: {fileID: 1717701496}
   m_Layer: 0
   m_Name: unnamed
-  m_TagString: Untagged
+  m_TagString: TopBoard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8318,7 +8342,7 @@ GameObject:
   - component: {fileID: 1812746809}
   m_Layer: 0
   m_Name: unnamed
-  m_TagString: Untagged
+  m_TagString: TopBoard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
