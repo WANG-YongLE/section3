@@ -79,6 +79,7 @@ public class BallMove : MonoBehaviour {
     float GetMaxSpeedByTime(float t) {
         if (t < 10f) return 0.01f;
         else if (t < 20f) return 0.1f;
-        else return 0.1f;
+        else if(t < 30f) return 0.2f;
+        else return 0.3f;
     }
 }
