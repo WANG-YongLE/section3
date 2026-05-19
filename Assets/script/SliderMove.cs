@@ -44,7 +44,7 @@ public class MultiSliderController : MonoBehaviour {
     void OnReceive(SliderConfig slider, Float32Msg msg) {
         slider.targetPosition = Mathf.Clamp(msg.data, -0.12f, 0.12f);
 
-        Debug.Log($"[{slider.topicName}] -> {msg.data}");
+   //     Debug.Log($"[{slider.topicName}] -> {msg.data}");
     }
 
     void Update() {

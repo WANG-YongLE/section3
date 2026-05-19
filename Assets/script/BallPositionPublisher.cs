@@ -36,6 +36,6 @@ public class BallPublisher : MonoBehaviour {
 
         ros.Publish(topicName, msg);
 
-        Debug.Log($"Ball Pos: {pos}");
+      //  Debug.Log($"Ball Pos: {pos}");
     }
 }
