@@ -28,7 +28,9 @@ public class BallMove : MonoBehaviour {
         int sx = Random.Range(0, 2) == 0 ? -1 : 1;
         int sy = Random.Range(0, 2) == 0 ? -1 : 1;
         int sz = Random.Range(0, 2) == 0 ? -1 : 1;
-     
+
+
+
         velocity = new Vector3(sx * 0.001f, sy * 0.001f, sz * 0.001f);
         maxSpeed = GetMaxSpeedByTime(0f);
         ros = ROSConnection.GetOrCreateInstance();
